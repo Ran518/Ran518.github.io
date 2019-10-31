@@ -1,0 +1,72 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Academic Experience
+
+<strong>Columbia University, New York, NY  </strong>
+
+<em>Sep. 2019 – Present</em>
+
+Master of Science, Epidemiology
+
+<strong>Kunming Medical University, Kunming, China </strong>
+
+<em>Sep. 2012 – June 2017</em>
+
+Bachelor of Medicine 
+
+
+# Professional Experience
+<strong>Peking University Third Hospital, Beijing, China </strong>
+
+<em>June 2018 - Aug.2018</em>
+
+Research Assistant             
+  <li> Conduct research project to evaluate the effectiveness of the osteoporosis self-assessment tool for Asians </li>
+  <li> Collected, sorted, cleaned the clinical data from Health Examination Center with the SPSS and SAS </li>
+  <li> Conduct statistical analysis with the data, including calculating specificity, sensitivity, likelihood ratio and plotting receiver operating characteristic curve (ROC) with various threshold values </li>
+  <li> OSTA has good accuracy in evaluating the osteoporosis, and the screening accuracy in the female population is higher than that in the male population</li>
+</ul>
+<br />
+<strong> Health Center for Hongyun Community, Kunming, China	</strong>
+
+<em>Dec. 2016 – Jan. 2017 </em>
+
+Medical Intern
+  <ul>
+  <li> Medical volunteer responsible for recruiting hypertensive patients to participate in a project to promote medication adherence </li>
+<li> Applied knowledge learned from medical statistic and epidemiology course to update the database for diabetic patients</li>
+</ul>
+
+<strong> Kunming Medical University, Kunming, China </strong> 
+
+<em> Sep. 2015 – May. 2016 </em>
+
+Research Assistant 
+  <ul>
+  <li> Responsible for producing cellular immunity of influenza vaccine lyophilized liposome and Participated in part of the cellular immunity experiment  
+  <li> Research Thesis: “Cellular immunity of influenza vaccine lyophilized liposome produced by freeze-thawing” </li>
+</ul>
+
+  
+<strong> The 1st Affiliated Hospital of Kunming Medical University,Kunming, China </strong> 	 
+
+<em> July 2015 – Sep. 2015 </em>
+
+Medical Intern 
+  <ul>
+  <li> Improved the efficiency of the electrocardiogram examination and the patient experience by using solid ECG knowledge to help analysis examination results and guided patients to cooperate with doctors </li>
+</ul>
+
+# Skills Activities & Interests
+
+R studio, SAS, Advanced Excel, PowerPoint, JASP, Tableau, Venngage (Info-graph maker), and Qualtrics (online questionnaire maker)
+
+
+

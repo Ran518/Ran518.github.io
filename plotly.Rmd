@@ -1,0 +1,137 @@
+---
+title: "plotly"
+output: 
+    flexdashboard::flex_dashboard:
+      orientation: columns
+      vertical_layout: fill
+      #Navbar:title: "Three Graph for Plotly"
+      css: ./css/bootstrap.min.css
+      include:
+      after_body: footer.html
+      social: [ "menu"]
+      navbar:
+      - { title: "Home", href: "index.html", align: left }
+      - { title: "Resume", href: "about.html", align: right }
+---
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(flexdashboard)
+library(plotly)
+set.seed(123)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### The number of items ordered in each aisle where more than 10000 items ordered. 
+
+```{r instacart, collapse = TRUE}
+f <- list(
+  family = "Courier New, monospace",
+  size = 15,
+  color = "#7f7f7f"
+)
+x <- list(
+  title = "Product Name",
+  titlefont = f
+)
+y <- list(
+  title = "Total Orders",
+  titlefont = f
+)
+
+plot_bar <- instacart %>%
+  group_by(aisle) %>% 
+  distinct() %>% 
+  summarize(count = n()) %>% 
+  arrange(desc(count)) %>% 
+  filter(count > 10000) %>% 
+  arrange(count) %>% 
+  #change the order level of aisle according to the value of count_aisle 
+  mutate(aisle = forcats::fct_reorder(aisle, count)) %>% 
+  plot_ly(x = ~aisle, y = ~count, color = ~aisle, type = "bar") %>% 
+  layout(xaxis = x, yaxis = y)
+
+plot_bar
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### The number of orders in each day of week
+
+
+```{r scatter, collapse = TRUE}
+f <- list(
+  family = "Courier New, monospace",
+  size = 15,
+  color = "#7f7f7f"
+)
+x <- list(
+  title = "",
+  titlefont = f
+)
+y <- list(
+  title = "Total Orders",
+  titlefont = f
+)
+
+plot_boxplot = instacart %>% 
+  group_by(order_dow,add_to_cart_order) %>% 
+  distinct() %>% 
+  summarize(count_order_day = n()) %>% 
+  ungroup() %>% 
+  group_by(order_dow) %>% 
+  mutate(total= add_to_cart_order * count_order_day) %>% 
+  ungroup() %>% 
+  mutate(order_dow = factor(order_dow, levels = c("1","2","3","4","5","6","0")),
+         order_dow = recode(order_dow,"1"="Monday","2"="Monday","3"="Wednesday","4"="Thursday","5"="Friday","6"="Saturday","0"="Sunday")) %>%
+  plot_ly(x = ~order_dow, y = ~total, type = "box", color = ~order_dow) %>% 
+  layout(xaxis = x,yaxis = y)
+
+plot_boxplot
+```
+
+### The number of orders in each hour of the day
+
+```{r boxplot, collapse = TRUE}
+f <- list(
+  family = "Courier New, monospace",
+  size = 15,
+  color = "#7f7f7f"
+)
+x <- list(
+  title = "Hour of the Day",
+  titlefont = f
+)
+y <- list(
+  title = "Total Orders",
+  titlefont = f
+)
+
+plot_scatter = instacart %>% 
+  group_by(order_hour_of_day) %>% 
+  distinct() %>% 
+  summarize(count_order = n()) %>% 
+  arrange(order_hour_of_day) %>% 
+  plot_ly(x = ~order_hour_of_day, y = ~count_order, type = "scatter", mode = "markers") %>% 
+  layout(xaxis = x,yaxis = y)
+
+plot_scatter
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

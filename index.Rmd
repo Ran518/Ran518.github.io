@@ -1,0 +1,31 @@
+---
+title: "Ran's Personal Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+<img src= "https://media.giphy.com/media/l1J9urAfGd3grKV6E/giphy.gif" style = "width: 75%">
+
+# Overview of Website
+This is a website about Ran, which contains my personal academic and professional experiences. I am an epidemiology student at [Columbia University Mailman School of Public health](https://www.mailman.columbia.edu). Before coming to Columbia, I was a medical student in China. If you want to learn more about me and past experences, please refer to my [resume](about.html).
+
+![](./images/columbia.jpg)
+
+
+![](./images/columbia2.jpg)
+
+# Making Plots!
+
+The website also contains plots about the data from instacartis which is an online grocery service that allows people to shop online from local stores. The first <strong> bar plot </strong> shows the number of items ordered in each aisle where more than 10000 items ordered. The second <strong> boxplot </strong>indicates the number of orders in each day of week. And the last <strong>scatter plot </strong> shows the number of orders in each hour of the day. If you want to see these plots, please click [here](plotly.html)
+
+
+
+
+
+
+
+
+
