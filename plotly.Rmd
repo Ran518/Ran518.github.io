@@ -5,7 +5,7 @@ output:
       orientation: columns
       vertical_layout: fill
       #Navbar:title: "Three Graph for Plotly"
-      css: ./css/bootstrap.min.css
+      #css: ./css/bootstrap.min.css
       include:
       after_body: footer.html
       social: [ "menu"]
